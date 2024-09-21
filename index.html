@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dublin Bus</title>
+    <!-- cdn daisyUI  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- cdn google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ! font access  -->
+    <!-- 
+    font-family: "Inter", sans-serif; 
+    font-family: "Raleway", sans-serif; 
+     -->
+    <!-- cdn font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#F7F8F8] border-[1px]">
+    <header></header>
+    <main class="my-20">
+      <!-- sec [ select your seat ] -->
+      <section
+        class="bg-white shadow-lg w-11/12 mx-auto grid grid-cols-3 gap-5 p-8 rounded-[24px]"
+      >
+        <!-- * left container starts  -->
+        <div
+          class="col-span-2 h-full pr-5 border-r-2 border-dashed border-[#0307124D]"
+        >
+          <h1 class="text-[#030712] text-[1.3rem] font-[600]">
+            Select Your Seat
+          </h1>
+          <div
+            class="flex justify-between border-y-[1px] border-dashed border-black py-4 my-5"
+          >
+            <div class="flex gap-2 text-[#03071280] font-[500]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="##03071280"
+              >
+                <path
+                  d="M200-120q-17 0-28.5-11.5T160-160v-40q-50 0-85-35t-35-85v-200q0-50 35-85t85-35v-80q0-50 35-85t85-35h400q50 0 85 35t35 85v80q50 0 85 35t35 85v200q0 50-35 85t-85 35v40q0 17-11.5 28.5T760-120q-17 0-28.5-11.5T720-160v-40H240v40q0 17-11.5 28.5T200-120Zm-40-160h640q17 0 28.5-11.5T840-320v-200q0-17-11.5-28.5T800-560q-17 0-28.5 11.5T760-520v160H200v-160q0-17-11.5-28.5T160-560q-17 0-28.5 11.5T120-520v200q0 17 11.5 28.5T160-280Zm120-160h400v-80q0-27 11-49t29-39v-112q0-17-11.5-28.5T680-760H280q-17 0-28.5 11.5T240-720v112q18 17 29 39t11 49v80Zm200 0Zm0 160Zm0-80Z"
+                />
+              </svg>
+              <p>Available</p>
+            </div>
+            <div class="flex gap-2 text-[#1DD100] font-[500]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#1DD100"
+              >
+                <path
+                  d="M200-120q-17 0-28.5-11.5T160-160v-40q-50 0-85-35t-35-85v-200q0-50 35-85t85-35v-80q0-50 35-85t85-35h400q50 0 85 35t35 85v80q50 0 85 35t35 85v200q0 50-35 85t-85 35v40q0 17-11.5 28.5T760-120q-17 0-28.5-11.5T720-160v-40H240v40q0 17-11.5 28.5T200-120Zm-40-160h640q17 0 28.5-11.5T840-320v-200q0-17-11.5-28.5T800-560q-17 0-28.5 11.5T760-520v160H200v-160q0-17-11.5-28.5T160-560q-17 0-28.5 11.5T120-520v200q0 17 11.5 28.5T160-280Zm120-160h400v-80q0-27 11-49t29-39v-112q0-17-11.5-28.5T680-760H280q-17 0-28.5 11.5T240-720v112q18 17 29 39t11 49v80Zm200 0Zm0 160Zm0-80Z"
+                />
+              </svg>
+              <p>Selected</p>
+            </div>
+          </div>
+
+          <!-- ? seat decoration  -->
+          <section
+            class="grid grid-cols-11 justify-center items-center justify-items-center gap-4 text-[#03071280] font-[500]"
+          >
+            <div class="col-span-9"></div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white col-span-2"
+            >
+              Driver
+            </div>
+            <div class="text-center w-full">A</div>
+            <div
+              id="btn-a1"
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              A1
+            </div>
+            <div
+              id="btn-a2"
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              A2
+            </div>
+            <div class="col-span-2"></div>
+
+            <div
+              id="btn-a3"
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              A3
+            </div>
+            <div
+              id="btn-a4"
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              A4
+            </div>
+            <div class="w-full text-center">B</div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              B1
+            </div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              B2
+            </div>
+            <div class="col-span-2"></div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              B3
+            </div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              B4
+            </div>
+            <div class="w-full text-center text-[#03071280]">C</div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              C1
+            </div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              C2
+            </div>
+            <div class="col-span-2"></div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              C3
+            </div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              C4
+            </div>
+            <div class="w-full text-center">D</div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              D1
+            </div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              D2
+            </div>
+            <div class="col-span-2"></div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              D3
+            </div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              D4
+            </div>
+            <div class="w-full text-center">E</div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              E1
+            </div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              E2
+            </div>
+            <div class="col-span-2"></div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              E3
+            </div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              E4
+            </div>
+            <div class="w-full text-center">F</div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              F1
+            </div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              F2
+            </div>
+            <div class="col-span-2"></div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              F3
+            </div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              F4
+            </div>
+            <div class="w-full text-center">G</div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              G1
+            </div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              G2
+            </div>
+            <div class="col-span-2"></div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              G3
+            </div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              G4
+            </div>
+            <div class="text-center w-full">H</div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              H1
+            </div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              H2
+            </div>
+            <div class="col-span-2"></div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              H3
+            </div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              H4
+            </div>
+            <div class="w-full text-center">I</div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              I1
+            </div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              I2
+            </div>
+            <div class="col-span-2"></div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              I3
+            </div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              I4
+            </div>
+            <div class="text-center w-full">J</div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              J1
+            </div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              J2
+            </div>
+            <div class="col-span-2"></div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              J3
+            </div>
+            <div
+              class="btn btn-ghost w-full bg-[#F7F8F8] hover:bg-[#1DD100] hover:text-white border-[1px] col-span-2"
+            >
+              J4
+            </div>
+          </section>
+        </div>
+        <!-- * left container ends  -->
+
+        <!-- * right container starts  -->
+        <div class="col-span-1 h-full">
+          <h1
+            class="text-[#030712] text-[1.3rem] font-[600] border-b-[1px] border-dashed border-[#03071233] pb-5 mb-5"
+          >
+            Select Your Seat
+          </h1>
+
+          <!-- ? seat price calculation card  -->
+          <section class="p-7 bg-[#F7F8F8] rounded-[12px] space-y-4">
+            <div class="flex justify-between">
+              <h2 class="relative">
+                Seat
+                <span
+                  id="seat-selected-count"
+                  class="absolute top-[-8px] right-[-12px] text-[10px] text-white bg-[#1DD100] px-[2px] rounded-md"
+                  >0</span
+                >
+                <span
+                  id="seat-selected-count-2"
+                  class="absolute top-[-8px] right-[-35px] text-[10px] text-white bg-[#1DD100] px-[2px] rounded-md"
+                  >40</span
+                >
+              </h2>
+              <h2>Class</h2>
+              <h2>Price</h2>
+            </div>
+            <div class="border-t-[1px] border-dashed border-[#03071233]"></div>
+
+            <!-- ? seat select portion  -->
+            <div id="update-clicked-seat" class="space-y-4">
+              <h1 id="no-seat-text" class="text-[2rem] text-red-600">
+                No seat Booked
+              </h1>
+            </div>
+            <!-- h seat selection ends  -->
+
+            <div class="border-t-[1px] border-[#03071233]"></div>
+
+            <!-- h total price section  -->
+            <div class="text-[#030712] font-[500] flex justify-between">
+              <h3>Total Price</h3>
+              <p>BDT : <span id="total-price">0</span></p>
+            </div>
+
+            <div class="border-t-[1px] border-dashed border-[#03071233]"></div>
+            <!-- h coupon  -->
+            <div id="coupon-section" class="flex gap-2">
+              <label
+                class="input input-bordered flex items-center gap-2 flex-1"
+              >
+                <input
+                  type="text"
+                  class="grow"
+                  placeholder="Have any coupon?"
+                  disabled
+                  id="disabled-field"
+                />
+              </label>
+              <button
+                disabled
+                id="coupon-btn"
+                class="btn btn-primary bg-[#1DD100] text-white border-none hover:bg-slate-300 hover:text-black"
+              >
+                Apply
+              </button>
+            </div>
+            <!-- h hidden portion , discount  -->
+            <div id="hidden-portion" class="hidden">
+              <div class="text-[#030712] font-[500] flex justify-between">
+                <h3>Discount</h3>
+                <p>- BDT : <span id="coupon-discount-money">0</span></p>
+              </div>
+            </div>
+
+            <div class="border-t-[1px] border-dashed border-[#03071233]"></div>
+            <!-- h grand price portion  -->
+            <div class="text-[#030712] font-[500] flex justify-between">
+              <p>Grand Total</p>
+              <p>BDT : <span id="grand-total">0</span></p>
+            </div>
+          </section>
+
+          <!-- * passenger details  -->
+          <div>
+            <label class="form-control">
+              <div class="label text-[#030712] font-[600]">
+                <span class="label-text">Passenger Name</span>
+              </div>
+              <input
+                type="text"
+                placeholder="What is your Name"
+                class="input input-bordered w-full"
+                id="name-check"
+              />
+              <div class="label"></div>
+            </label>
+            <label class="form-control w-full">
+              <div class="label text-[#030712] font-[600]">
+                <span class="label-text">Phone Number</span>
+              </div>
+              <input
+                type="number"
+                placeholder="Phone Number"
+                class="input input-bordered w-full"
+                id="phone-number"
+              />
+              <div class="label"></div>
+            </label>
+            <label class="form-control w-full">
+              <div class="label text-[#030712] font-[600]">
+                <span class="label-text">Email ID</span>
+              </div>
+              <input
+                type="text"
+                placeholder="Enter Your Email ID"
+                class="input input-bordered w-full"
+              />
+              <div class="label"></div>
+            </label>
+
+            <!-- ! check modal  starts -->
+            <!-- Open the modal using ID.showModal() method -->
+            <button
+              onclick="my_modal_5.showModal()"
+              id="submit-btn"
+              disabled
+              class="btn btn-primary bg-[#1DD100] text-white border-none hover:bg-slate-300 hover:text-black w-full"
+            >
+              Apply
+            </button>
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+              <div class="modal-box">
+                <h3 class="text-lg font-bold">Hello!</h3>
+                <p class="py-4">
+                  Press ESC key or click the button below to close
+                </p>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+            <!-- ! modal ends  -->
+
+            <!-- <button
+              id="submit-btn"
+              disabled
+              class="btn btn-primary bg-[#1DD100] text-white border-none hover:bg-slate-300 hover:text-black w-full"
+            >
+              Apply
+            </button> -->
+          </div>
+        </div>
+        <!-- * right container ends  -->
+      </section>
+    </main>
+    <footer></footer>
+    <!-- cdn js files  -->
+    <script src="js/utilities.js"></script>
+    <script src="js/button-click.js"></script>
+    <!-- <script src="js/total-price.js"></script> -->
+  </body>
+</html>
